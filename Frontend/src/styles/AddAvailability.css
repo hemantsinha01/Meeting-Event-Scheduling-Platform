@@ -1,0 +1,267 @@
+.availability-container {
+  padding: 2rem;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.availability-header {
+  margin-bottom: 2rem;
+}
+
+.availability-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.availability-header p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-container {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tab-icon {
+  font-size: 1rem;
+}
+
+.availability-content {
+  max-width: 800px;
+}
+
+.section-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+.activity-selector,
+.timezone-selector {
+  flex: 1;
+}
+
+.activity-selector label,
+.timezone-selector label {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.activity-selector select,
+.timezone-selector select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #111827;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.weekly-hours {
+  margin-top: 2rem;
+}
+
+.weekly-hours h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.day-toggle {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.day-toggle input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.day-toggle label {
+  font-size: 0.875rem;
+  color: #111827;
+  cursor: pointer;
+}
+
+.time-slots-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.time-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.time-slot-row input[type="time"] {
+  padding: 0.375rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #111827;
+  width: 120px;
+}
+
+.time-slot-row span {
+  color: #6b7280;
+}
+
+.remove-slot,
+.add-slot,
+.copy-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.remove-slot:hover,
+.add-slot:hover,
+.copy-slot:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.unavailable-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* Added styles for submit button and messages */
+.submit-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.submit-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.message.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 768px) {
+  .availability-container {
+    padding: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .time-slot-row {
+    flex-wrap: wrap;
+  }
+
+  .time-slot-row input[type="time"] {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .availability-container {
+    padding: 0.5rem;
+  }
+
+  .day-toggle {
+    width: 100px;
+  }
+
+  .time-slot-row input[type="time"] {
+    width: 90px;
+  }
+}
+
